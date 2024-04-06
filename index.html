@@ -102,7 +102,10 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          
+          //these two lines collect and store details about the image in canvas 1 
+          const imageData = context.getImageData(0,0,img.width,img.height);
+          const data = imageData.data; 
+         
           
           
         } // end of img.onload
