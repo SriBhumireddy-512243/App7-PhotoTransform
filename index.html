@@ -101,7 +101,11 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          
+         
+          //these two lines will connect the function to the appropriate canvas which is canavs 2
+          var canvas2 = document.getElementById('canvas2'); 
+          var context2 = canvas.getContext('2d');
+         
           //these two lines collect and store details about the image in canvas 1 
           const imageData = context.getImageData(0,0,img.width,img.height);
           const data = imageData.data; 
@@ -150,8 +154,8 @@
      <!-- this is the second canvas that displays the blue image-->
       <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas2" */
-        var canvas = document.getElementById('myCanvas2');
-        var context = canvas.getContext("2d");
+        var canvas2 = document.getElementById('myCanvas2');
+        var context2 = canvas.getContext("2d");
         context.font = '20pt Calibri';/* sets font in canvas  */
         context.fillStyle = "black"; 
         context.fillText("New Blue image will go here", 10, 20); /*identifying text that goes on canvas*/
