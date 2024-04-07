@@ -106,13 +106,16 @@
           const imageData = context.getImageData(0,0,img.width,img.height);
           const data = imageData.data; 
 
+         //this loop iterates through every pixel and finds the red and green pixels and sets them to zero, so only blue pixels remain
           for (let i = 0; i < data.length; i += 4) {
               //removes the red pixels in the original image
                data[i] = 0; 
               // removes the green pixels in the original image
                data[i+1] = 0; 
           }
-          
+
+         //code that calls on method to display the blue pixels of image onto the second canvas
+         context2.putImageData(imageData,x,y);
           
         } // end of img.onload
         
