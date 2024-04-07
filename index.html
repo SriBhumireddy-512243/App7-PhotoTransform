@@ -103,7 +103,7 @@
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
       
           //these two lines collect and store details about the image in canvas 1 
-          const imageData = context.getImageData(0,0,img.width,img.height);
+          const imageData = context.getImageData(0,0,600,500);
           const data = imageData.data; 
 
          //this loop iterates through every pixel and finds the red and green pixels and sets them to zero, so only blue pixels remain
@@ -115,7 +115,7 @@
           }
 
          //code that calls on method to display the blue pixels of image onto the second canvas
-         context2.putImageData(imageData,x,y);
+         context2.putImageData(imageData,0,0);
           
         } // end of img.onload
         
