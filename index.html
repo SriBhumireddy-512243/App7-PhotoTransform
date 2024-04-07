@@ -24,10 +24,10 @@
   http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   
   Brief Description of Goal of Code:
-  blah, blah, blah,
+  The goal of this code is to be able to upload a photo which will be displayed in its original format and in a format where only the blue intensities are shown. 
  
   Known Issues:
-  blah, blah, blah, blah
+  No known issue at this moment. 
 -->
 
  <head>
@@ -41,6 +41,7 @@
 
  <script>
   var docMod = document.lastModified; // gets last modified date and time of the index.html file
+  alert("This file last modified " + docMod); // generates alert box with time stamp
   console.log("This file last modified  " + docMod); // displays last modified date and time in the javascipt browser console 
 
 /* detectVerticalSquash & drawImageIOSFix = are functions that are critical due to a flaw in the iPhone camera software that squishes any photos displayed on an HTML5 canvas element. https://github.com/stomita/ios-imagefile-megapixel
@@ -147,7 +148,7 @@
       <div id="messageDisplayArea"></div>
 
       <!--this is the first canvas that displays the original image-->
-      <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="myCanvas" width=600 height=500 style="border:2px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
@@ -157,7 +158,7 @@
       </script>
 
      <!-- this is the second canvas that displays the blue image-->
-      <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="myCanvas2" width=600 height=500 style="border:2px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas2" */
         var canvas2 = document.getElementById('myCanvas2');
         var context2 = canvas2.getContext("2d");
